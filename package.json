@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "arweave": "^1.10.16",
+    "redstone-smartweave": "^0.3.10-alpha.8"
+  },
+  "devDependencies": {
+    "arlocal": "^1.0.37"
+  }
+}
