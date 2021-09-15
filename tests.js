@@ -6,7 +6,7 @@ const { default: ArLocal } = require("arlocal");
 
 (async () => {
   // Set up ArLocal
-  const arLocal = new ArLocal(1986, false);
+  const arLocal = new ArLocal(1985, false);
   await arLocal.start();
 
   // Set up Arweave client
@@ -24,7 +24,8 @@ const { default: ArLocal } = require("arlocal");
 
   // Deploying contract
   const contractSrc = fs.readFileSync(path.join(__dirname, "./contract.js"), "utf8");
-  const initialState = fs.readFileSync(path.join(__dirname, "./initial-state.json"), "utf8");
+  const initialState = fs.readFileSync(path.join(__dirname, "./init-state.json"), "utf8");
+  console.log(initialState);
   const contractTxId = await smartweave.createContract.deploy({
     wallet,
     initState: initialState,
